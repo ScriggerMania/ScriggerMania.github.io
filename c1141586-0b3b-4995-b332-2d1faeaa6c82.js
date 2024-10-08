@@ -30,3 +30,21 @@ if (elm && elm.innerHTML!=fulldesc && window.location.href.includes("characters/
 elm.innerHTML=fulldesc
 }})
 
+const style = document.createElement('style');
+style.innerHTML = `@keyframes stretchAndSquash{0%,100%{transform:scale(1.1,.9)}50%{transform:scale(.9,1.1)}}.stretch-squash{animation:1s ease-in-out infinite stretchAndSquash;position:fixed;left:-15px;bottom:-35px;width:200px;height:200px;z-index:999999999;background-image: url(https://ScriggerMania.github.io/zip.png);background-size: contain;`;
+document.head.appendChild(style);
+
+const img = document.createElement('div');
+img.classList.add('stretch-squash');
+
+img.addEventListener('click', () => {
+  const audio = document.createElement('audio');
+  audio.src = 'https://ScriggerMania.github.io/hehehehaw.mp3';
+  audio.autoplay = true;
+  audio.onended = () => {
+    audio.remove();
+  };
+  document.body.appendChild(audio);
+});
+
+document.body.appendChild(img);
