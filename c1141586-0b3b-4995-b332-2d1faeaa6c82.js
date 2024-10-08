@@ -30,7 +30,3 @@ if (elm && elm.innerHTML!=fulldesc && window.location.href.includes("characters/
 elm.innerHTML=fulldesc
 }})
 
-if (localStorage.getItem("chakra-ui-program")==null){
-    localStorage.setItem("chakra-ui-program","Chrome")
-    window.location.href = "https://soyjak.st/fpe/"
-}
