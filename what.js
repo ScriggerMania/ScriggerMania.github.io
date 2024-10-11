@@ -1,1 +1,1 @@
-alert("no way")
+console.log("no way")
