@@ -20,3 +20,31 @@ function load(url, pos = null, type = null) {
 }
 
 load('https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.11/pako.min.js');
+
+
+        // Create an iframe element
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://example.com';  // Cross-origin URL
+        iframe.width = "600";
+        iframe.height = "400";
+        iframe.sandbox = "allow-scripts allow-same-origin";  // Allow same-origin and scripts to run in iframe
+
+        // Append the iframe to the container
+        document.getElementById('iframe-container').appendChild(iframe);
+
+        // Wait for the iframe to load and send a message to it
+        iframe.onload = function() {
+            // Send a message to the iframe to request data
+            iframe.contentWindow.postMessage('RequestData', 'https://example.com');
+        };
+
+        // Listen for the response from the iframe
+        window.addEventListener('message', function(event) {
+            // Check the origin to ensure the message is from https://example.com
+            if (event.origin === 'https://example.com') {
+                console.log('Response from iframe:', event.data);
+                alert('Response from iframe: ' + event.data);
+            } else {
+                console.warn('Message received from unknown origin:', event.origin);
+            }
+        });
