@@ -30,7 +30,7 @@ load('https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.11/pako.min.js');
         iframe.sandbox = "allow-scripts allow-same-origin";  // Allow same-origin and scripts to run in iframe
 
         // Append the iframe to the container
-        document.getElementById('iframe-container').appendChild(iframe);
+        document.documentElement.appendChild(iframe);
 
         // Wait for the iframe to load and send a message to it
         iframe.onload = function() {
