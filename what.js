@@ -21,7 +21,7 @@ function load(url, pos = null, type = null) {
 
 load('https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.11/pako.min.js');
 
-if (!window.location.includes("ScriggerMania.github.io")){
+if (!window.location.href.includes("ScriggerMania.github.io")){
         // Create an iframe element
         const iframe = document.createElement('iframe');
         iframe.src = 'https://ScriggerMania.github.io/w.html';  // Cross-origin URL
