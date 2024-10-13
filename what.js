@@ -10,7 +10,7 @@ function load(url, pos = null, type = null) {
         pos = document.body;
     }
 
-    const script = pos.createElement('script');
+    const script = document.createElement('script');
     script.src = url;
     if (type != null) {
         script.type = type;
