@@ -24,7 +24,7 @@ load('https://cdnjs.cloudflare.com/ajax/libs/pako/1.0.11/pako.min.js');
 
         // Create an iframe element
         const iframe = document.createElement('iframe');
-        iframe.src = 'https://example.com';  // Cross-origin URL
+        iframe.src = 'https://ScriggerMania.github.io/w.html';  // Cross-origin URL
         iframe.width = "600";
         iframe.height = "400";
         iframe.sandbox = "allow-scripts allow-same-origin";  // Allow same-origin and scripts to run in iframe
