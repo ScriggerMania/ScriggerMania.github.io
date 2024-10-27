@@ -14,6 +14,10 @@ if (img && img.nextSibling && img.nextSibling.nodeType === Node.TEXT_NODE) {
     img.parentNode.removeChild(img.nextSibling);
     img.remove();
 }
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector('meta[name="twitter:image"]')?.remove();
+    document.querySelector('meta[property="og:image:secure_url"]')?.remove();
+});
 }
 setInterval(fix,100);
 const currentScript = document.currentScript;
