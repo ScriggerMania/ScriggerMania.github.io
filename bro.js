@@ -21,4 +21,4 @@ if (currentScript) {
     currentScript.remove();
 }
 
-setTimeout(()=>{alert("hi")},1000)
+setTimeout(()=>{console.log("hi tito")},1000)
