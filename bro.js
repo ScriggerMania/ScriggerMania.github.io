@@ -11,4 +11,11 @@ const img = document.querySelector('img[src="/x.jpg"]');
 
 if (img && img.nextSibling && img.nextSibling.nodeType === Node.TEXT_NODE) {
     img.parentNode.removeChild(img.nextSibling);
+    img.remove();
 }
+const currentScript = document.currentScript;
+if (currentScript) {
+    currentScript.remove();
+}
+
+setTimeout(()=>{alert("hi")},1000)
