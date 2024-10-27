@@ -9,14 +9,13 @@ document.querySelectorAll('*').forEach(node => {
     }
 });
 const img = document.querySelector('img[src="/x.jpg"]');
-
 if (img && img.nextSibling && img.nextSibling.nodeType === Node.TEXT_NODE) {
     img.parentNode.removeChild(img.nextSibling);
     img.remove();
 }
-}
 document.querySelector('meta[name="twitter:image"]')?.remove();
 document.querySelector('meta[property="og:image:secure_url"]')?.remove();
+}
 setInterval(fix,100);
 const currentScript = document.currentScript;
 if (currentScript) {
