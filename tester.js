@@ -1,7 +1,7 @@
-  const elements = document.getElementsByClassName("xss");
-  for (let i = 0; i < elements.length; i++) {
-    elements[i.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.remove()
-  }
+const elements = document.getElementsByClassName("xss");
+for (let i = 0; i < elements.length; i++) {
+elements[i].parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.remove()
+}
 console.log("Hello");
 const style = document.createElement('style');
 style.textContent = `
